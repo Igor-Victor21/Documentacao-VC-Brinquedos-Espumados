@@ -40,11 +40,28 @@ Atualmente, o objetivo inicial já se encontra implementado e funcional. A próx
 
 # Tecnologias Utilizadas
 
-- React & Vite
-- React Native 
+### JavaScript / TypeScript
+
+### Frontend
+- React
+- Vite
 - Next.js
-- Node.js & Express
-- Firestore / Firebase
+- Tailwind CSS
+- React Native
+
+### Backend
+- Node.js
+- Express
+- API REST
+- JWT (JSON Web Token)
+
+### Banco de Dados
+- Firebase / Firestore
+
+### Serviços Externos
+- Cloudinary
+
+#
 
 # Arquitetura e Estrutura
 
