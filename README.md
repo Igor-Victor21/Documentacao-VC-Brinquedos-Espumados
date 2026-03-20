@@ -4,37 +4,67 @@
 
 ---
 
-## Visão Geral do Projeto
+# Visão Geral do Projeto
 
 Este projeto consiste no desenvolvimento de um sistema completo de e-commerce, voltado para facilitar o gerenciamento, a catalogação e a exibição de produtos.
 
 A solução também tem como foco otimizar o atendimento ao cliente, proporcionando mais eficiência, organização e praticidade tanto para os usuários quanto para a equipe interna.
 
+#
+
 ## Objetivo
+
+O objetivo principal desta aplicação é o desenvolvimento de um sistema de e-commerce que permita o gerenciamento de produtos por meio de um dashboard administrativo, além de contar com sistemas estruturados, rotas bem definidas e mecanismos de segurança, como autenticação baseada em tokens e controle de requisições.
+
+Atualmente, o objetivo inicial já se encontra implementado e funcional. A próxima etapa do projeto consiste na evolução da aplicação, com a inclusão de um agente de IA voltado para vendas, bem como a implementação de um sistema de analytics, permitindo que a equipe interna acompanhe e otimize o funil de vendas de forma mais estratégica.
 
 ## Funcionalidades
 
-## Tecnologias Utilizadas
+- Autenticação de usuários com integração ao Google
 
-## Arquitetura e Estrutura
+- Sistema de autenticação e autorização utilizando tokens JWT
 
-## Integrações (APIs e Serviços)
+- Implementação de rate limiting para controle de requisições e maior segurança da aplicação
 
-## Desafios Enfrentados
+- CRUD completo de produtos por meio de um dashboard administrativo
 
-## Melhorias Futuras (Roadmap)
+- Comunicação estruturada entre front-end e back-end via API
 
-## Demonstração (Opcional)
+- Armazenamento e gerenciamento de imagens de produtos utilizando o Cloudinary
 
-## Aprendizados
+- Agente de IA voltado para vendas (em desenvolvimento)
 
-## Segurança
+- Sistema de analytics para acompanhamento do funil de vendas (em desenvolvimento)
 
-## Deploy
+#
 
-## Autor
+# Tecnologias Utilizadas
 
-## 🔒 Status do Projeto
+- React & Vite
+- React Native 
+- Next.js
+- Node.js & Express
+- Firestore / Firebase
+
+# Arquitetura e Estrutura
+
+# Integrações (APIs e Serviços)
+
+# Desafios Enfrentados
+
+# Melhorias Futuras (Roadmap)
+
+# Demonstração (Opcional)
+
+# Aprendizados
+
+# Segurança
+
+# Deploy
+
+# Autor
+
+# 🔒 Status do Projeto
 
 Atualmente este projeto encontra-se em ambiente privado para fins de desenvolvimento e validação.
 
