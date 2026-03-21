@@ -40,25 +40,43 @@ Atualmente, o objetivo inicial já se encontra implementado e funcional. A próx
 
 # Tecnologias Utilizadas
 
-### JavaScript / TypeScript
+### Linguagem: JavaScript / TypeScript
 
-### Frontend
-- React
-- Vite
+#
+
+# Frontend
+
+### E-commerce
+
 - Next.js
 - Tailwind CSS
+
+### Dashboard
+
+- React
+- Vite
+
+### Mobile
+
 - React Native
 
-### Backend
+#
+
+# Backend
+
 - Node.js
 - Express
 - API REST
 - JWT (JSON Web Token)
 
+#
+
 ### Banco de Dados
+
 - Firebase / Firestore
 
 ### Serviços Externos
+
 - Cloudinary
 
 #
