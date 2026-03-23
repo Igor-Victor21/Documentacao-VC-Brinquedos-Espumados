@@ -51,14 +51,20 @@ Atualmente, o objetivo inicial já se encontra implementado e funcional. A próx
 - Next.js
 - Tailwind CSS
 
+[Saiba mais](./doc/E-commerceDoc.md)
+
 ### Dashboard
 
 - React
 - Vite
 
+[Saiba mais](./doc/DashboardDoc.md)
+
 ### Mobile
 
 - React Native
+
+[Saiba mais](./doc/MobileDoc.md)
 
 #
 
@@ -69,15 +75,21 @@ Atualmente, o objetivo inicial já se encontra implementado e funcional. A próx
 - API REST
 - JWT (JSON Web Token)
 
+[Saiba mais](./doc/BackendDoc.md)
+
 #
 
 ### Banco de Dados
 
 - Firebase / Firestore
 
+[Saiba mais](./doc/DatabaseDoc.md)
+
 ### Serviços Externos
 
 - Cloudinary
+
+[Saiba mais](./doc/ServicosExternos.md)
 
 #
 
