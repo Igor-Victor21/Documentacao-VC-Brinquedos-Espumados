@@ -10,7 +10,7 @@ Este projeto consiste no desenvolvimento de um sistema completo de e-commerce, v
 
 A solução também tem como foco otimizar o atendimento ao cliente, proporcionando mais eficiência, organização e praticidade tanto para os usuários quanto para a equipe interna.
 
-#
+---
 
 ## Objetivo
 
@@ -36,72 +36,124 @@ Atualmente, o objetivo inicial já se encontra implementado e funcional. A próx
 
 - Sistema de analytics para acompanhamento do funil de vendas (em desenvolvimento)
 
-#
+---
 
-# Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
-### Linguagem: JavaScript / TypeScript
+### Linguagem
+- JavaScript / TypeScript
 
-#
+---
 
-# Frontend
+## Frontend
 
 ### E-commerce
-
 - Next.js
-- Tailwind CSS
+- Tailwind CSS  
 
 [Saiba mais](./doc/E-commerceDoc.md)
 
 ### Dashboard
-
 - React
-- Vite
+- Vite  
 
 [Saiba mais](./doc/DashboardDoc.md)
 
 ### Mobile
-
-- React Native
+- React Native  
 
 [Saiba mais](./doc/MobileDoc.md)
 
-#
+---
 
-# Backend
-
+## Backend
 - Node.js
 - Express
 - API REST
-- JWT (JSON Web Token)
+- JWT (JSON Web Token)  
 
 [Saiba mais](./doc/BackendDoc.md)
 
-#
+---
 
-### Banco de Dados
-
-- Firebase / Firestore
+## Banco de Dados
+- Firebase / Firestore  
 
 [Saiba mais](./doc/DatabaseDoc.md)
 
-### Serviços Externos
+---
 
-- Cloudinary
+## Serviços Externos
+- Cloudinary  
 
 [Saiba mais](./doc/ServicosExternos.md)
 
-#
+---
 
 # Arquitetura e Estrutura
 
+## Arquitetura
+
+O projeto VC Brinquedos Espumados funciona, de forma geral, por meio de uma API REST. Toda a lógica de negócio, segurança, cálculos e integrações com serviços externos é centralizada no backend, garantindo maior controle e segurança da aplicação.
+
+A comunicação entre as partes do sistema ocorre da seguinte forma:
+
+- O front-end realiza requisições para a API
+- A API valida a origem da requisição (URL/domínio)
+- Caso a requisição esteja autorizada:
+
+  - No E-commerce: é permitido apenas visualizar os produtos
+  - No Dashboard: o acesso é restrito a administradores para gerenciamento de produtos, usuários comuns possuem apenas permissão de visualização
+  - No Mobile: segue a mesma lógica do dashboard (até o momento)
+
+Essa estrutura permite maior organização, controle de acesso e escalabilidade do sistema.
+
+---
+
+## Estrutura
+
+A estrutura das três aplicações está organizada por meio de pastas bem definidas, incluindo separação para componentes visuais, imagens e documentação interna do projeto.
+
+Essa organização segue um padrão consistente, facilitando a manutenção, futuras modificações e a inclusão de novas funcionalidades.
+
+Além disso, a padronização do projeto permite que outros desenvolvedores consigam entender e trabalhar no código com mais facilidade, seja para ajustes ou para a adição de novas tecnologias.
+
+---
+
 # Integrações (APIs e Serviços)
+
+O projeto possui uma API própria, responsável por toda a lógica da aplicação. Além disso, conta com integração com o Cloudinary para o gerenciamento de imagens dos produtos.
+
+Por meio dessa integração, é possível realizar o upload, edição e exclusão de imagens, mantendo os arquivos organizados externamente e evitando o acúmulo de mídia dentro do sistema.
+
+### Futuras adições
+
+- Integração com API REST do n8n, para implementação de agentes de IA
+- Integração com WhatsApp Business Platform, para automatização do atendimento ao cliente
+
+---
 
 # Desafios Enfrentados
 
+Um dos principais desafios do projeto foi a transição do banco de dados relacional (SQL Server), com o qual já havia familiaridade, para o uso do Firebase (Firestore), que possui uma abordagem NoSQL.
+
+Essa mudança exigiu adaptação a uma nova forma de estruturar e consultar os dados, além de apresentar dificuldades na integração com a API, principalmente por conta das diferentes formas de conexão e manipulação do banco.
+
+Durante aproximadamente um mês, foram realizados diversos testes e ajustes até que a comunicação entre a aplicação e o banco de dados estivesse funcionando de forma estável.
+
+Também foram enfrentados problemas relacionados à conexão e à autenticação do Firebase. No entanto, após testes adicionais e validações em projetos separados, foi possível corrigir esses pontos e garantir o funcionamento adequado do sistema.
+
+Apesar dos desafios, essas situações contribuíram diretamente para o aprofundamento do conhecimento em integração de APIs, bancos de dados NoSQL e autenticação em aplicações modernas.
+
+---
+
 # Melhorias Futuras (Roadmap)
 
-# Demonstração (Opcional)
+As próximas evoluções do projeto têm como foco ampliar a automação, a inteligência do sistema e o suporte à tomada de decisões.
+
+- Implementação de agentes de IA, com foco em atendimento e suporte ao cliente
+- Automação de processos de atendimento e vendas, visando maior eficiência e redução de tarefas manuais
+- Desenvolvimento de um sistema de analytics, permitindo o acompanhamento de métricas e otimização do funil de vendas
 
 # Aprendizados
 
