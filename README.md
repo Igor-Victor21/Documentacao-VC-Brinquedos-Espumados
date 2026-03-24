@@ -147,7 +147,7 @@ Apesar dos desafios, essas situações contribuíram diretamente para o aprofund
 
 ---
 
-# Melhorias Futuras (Roadmap)
+# Melhorias Futuras
 
 As próximas evoluções do projeto têm como foco ampliar a automação, a inteligência do sistema e o suporte à tomada de decisões.
 
