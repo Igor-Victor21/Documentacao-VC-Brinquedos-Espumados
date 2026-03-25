@@ -4,7 +4,7 @@
 
 ---
 
-# Visão Geral do Projeto
+## Visão Geral do Projeto
 
 Este projeto consiste no desenvolvimento de um sistema completo de e-commerce, voltado para facilitar o gerenciamento, a catalogação e a exibição de produtos.
 
@@ -90,7 +90,7 @@ Atualmente, o objetivo inicial já se encontra implementado e funcional. A próx
 
 ---
 
-# Arquitetura e Estrutura
+## Arquitetura e Estrutura
 
 ## Arquitetura
 
@@ -120,7 +120,7 @@ Além disso, a padronização do projeto permite que outros desenvolvedores cons
 
 ---
 
-# Integrações (APIs e Serviços)
+## Integrações (APIs e Serviços)
 
 O projeto possui uma API própria, responsável por toda a lógica da aplicação. Além disso, conta com integração com o Cloudinary para o gerenciamento de imagens dos produtos.
 
@@ -133,7 +133,7 @@ Por meio dessa integração, é possível realizar o upload, edição e exclusã
 
 ---
 
-# Desafios Enfrentados
+## Desafios Enfrentados
 
 Um dos principais desafios do projeto foi a transição do banco de dados relacional (SQL Server), com o qual já havia familiaridade, para o uso do Firebase (Firestore), que possui uma abordagem NoSQL.
 
@@ -147,7 +147,7 @@ Apesar dos desafios, essas situações contribuíram diretamente para o aprofund
 
 ---
 
-# Melhorias Futuras
+## Melhorias Futuras
 
 As próximas evoluções do projeto têm como foco ampliar a automação, a inteligência do sistema e o suporte à tomada de decisões.
 
@@ -157,7 +157,7 @@ As próximas evoluções do projeto têm como foco ampliar a automação, a inte
 
 ---
 
-# Aprendizados
+## Aprendizados
 
 Durante o desenvolvimento deste projeto, foram adquiridos diversos aprendizados, envolvendo tanto aspectos técnicos quanto organizacionais.
 
@@ -169,7 +169,7 @@ Mesmo em áreas nas quais a equipe já possuía conhecimento, o projeto serviu c
 
 ---
 
-# Segurança
+## Segurança
 
 O sistema de segurança desenvolvido atualmente é sólido e adequado para o porte do projeto, garantindo proteção e controle de acesso às funcionalidades da aplicação.
 
@@ -188,7 +188,7 @@ Atualmente, o sistema já se encontra funcional e seguro para o seu contexto, co
 
 ---
 
-# Deploy
+## Deploy
 
 O projeto está planejado para ser hospedado em um serviço de VPS. No momento, a aplicação ainda não se encontra em produção, pois está em fase de desenvolvimento, com novas funcionalidades sendo implementadas.
 
@@ -198,7 +198,7 @@ Assim que essas etapas forem concluídas, a aplicação será publicada e dispon
 
 ---
 
-# Autor
+## Autor
 
 Desenvolvido por:
 
@@ -216,7 +216,7 @@ Desenvolvido por:
 
 ---
 
-# 🔒 Status do Projeto
+## 🔒 Status do Projeto
 
 Atualmente este projeto encontra-se em ambiente privado para fins de desenvolvimento e validação.
 
