@@ -155,13 +155,66 @@ As próximas evoluções do projeto têm como foco ampliar a automação, a inte
 - Automação de processos de atendimento e vendas, visando maior eficiência e redução de tarefas manuais
 - Desenvolvimento de um sistema de analytics, permitindo o acompanhamento de métricas e otimização do funil de vendas
 
+---
+
 # Aprendizados
+
+Durante o desenvolvimento deste projeto, foram adquiridos diversos aprendizados, envolvendo tanto aspectos técnicos quanto organizacionais.
+
+Entre os principais pontos, destacam-se o aprofundamento no uso de tecnologias, práticas de design UI/UX, levantamento de requisitos e organização de projetos.
+
+Além disso, houve evolução em conceitos relacionados a DevOps e ao ciclo completo de desenvolvimento, abrangendo desde a construção até a estruturação e manutenção da aplicação.
+
+Mesmo em áreas nas quais a equipe já possuía conhecimento, o projeto serviu como uma oportunidade para aperfeiçoar habilidades e tornar as soluções ainda mais consistentes e bem estruturadas.
+
+---
 
 # Segurança
 
+O sistema de segurança desenvolvido atualmente é sólido e adequado para o porte do projeto, garantindo proteção e controle de acesso às funcionalidades da aplicação.
+
+Entre os principais mecanismos implementados, destacam-se:
+
+- Configuração de CORS, permitindo o acesso apenas a URLs autorizadas
+- Autenticação de usuários com integração ao Google
+- Utilização de tokens JWT para autenticação e controle de sessões
+- Proteção de rotas privadas, exigindo token válido para acesso
+- Implementação de rate limiting para evitar requisições abusivas e possíveis ataques
+- Sistema de controle de permissões de usuários (ex: administrador e usuário comum)
+
+O projeto VC Brinquedos Espumados ainda está em fase inicial e, conforme evoluir, tanto a aplicação quanto os mecanismos de segurança serão aprimorados de forma contínua.
+
+Atualmente, o sistema já se encontra funcional e seguro para o seu contexto, com possibilidade de futuras melhorias e reforços na camada de segurança.
+
+---
+
 # Deploy
 
+O projeto está planejado para ser hospedado em um serviço de VPS. No momento, a aplicação ainda não se encontra em produção, pois está em fase de desenvolvimento, com novas funcionalidades sendo implementadas.
+
+Além disso, o deploy definitivo depende da disponibilização de recursos financeiros por parte da empresa responsável pelo projeto.
+
+Assim que essas etapas forem concluídas, a aplicação será publicada e disponibilizada para acesso.
+
+---
+
 # Autor
+
+Desenvolvido por:
+
+- Igor Victor  
+  GitHub: https://github.com/Igor-Victor21
+
+- Vinicius Koujaki  
+  GitHub: https://github.com/Vinicius-Koujaki-Nobre
+
+- Fabio Luis  
+  GitHub: https://github.com/roottracker
+
+- Jaqueline Batista  
+  GitHub: https://github.com/KiriNagsCloud
+
+---
 
 # 🔒 Status do Projeto
 
