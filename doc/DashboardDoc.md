@@ -75,20 +75,44 @@ Dentro de todo o projeto, o dashboard foi uma das partes mais desafiadoras de co
 
 ## Demonstração
 
-### Página Inicial
+### Login
+
+Sistema de login utilizando autenticação com Google via Firebase, além de suporte para recuperação de senha por e-mail, permitindo que o usuário redefina suas credenciais de forma segura.
+
+![LoginDashboard](../assets/LoginDashboard.png)
 
 ---
 
-### Listagem de Produtos
+### Página Inicial (Home)
+
+Página inicial do dashboard, onde é possível visualizar todos os produtos cadastrados no sistema, além de editar ou excluir informações de forma prática.
+
+![DashboardHome](../assets/DashboardHome.png)
 
 ---
 
-### Detalhes do Produto
+### Criar novos usuários / Lista de usuários
+
+Sistema de criação de novos usuários de forma simples, adequado para uma plataforma com acesso restrito a poucas pessoas.
+
+Também conta com uma listagem completa dos usuários cadastrados, facilitando o controle de acesso e a identificação de possíveis acessos indevidos.
+
+![DashboardListUsers](../assets/DashboardListUsers.png)
+
+---
+
+### Publicar novos produtos
+
+Sistema de cadastro de novos produtos integrado com múltiplas plataformas. Os produtos criados no dashboard são refletidos tanto no e-commerce quanto no mobile, mantendo todas as aplicações sincronizadas.
+
+![DashboardCreateProducts](../assets/DashboardCreateProducts.png)
 
 ---
 
 ## Observações
 
-Atualmente, a aplicação não está disponível para execução pública, pois ainda se encontra em fase de desenvolvimento e implementação de novas funcionalidades.
+Esta aplicação ainda está em desenvolvimento e em fase de testes. Trata-se de uma plataforma privada, por isso alguns detalhes não podem ser totalmente expostos.
 
-As imagens acima demonstram o funcionamento atual do sistema.
+Ainda há melhorias planejadas no design e, conforme o projeto evoluir, as imagens de demonstração também serão atualizadas.
+
+As imagens acima representam o funcionamento atual do sistema.
