@@ -69,18 +69,49 @@ Com o apoio de pesquisas e materiais de estudo, a equipe conseguiu realizar a in
 
 ### Página Inicial
 
+Página inicial acessada com uma conta de teste, onde o usuário já visualiza diretamente a lista de produtos disponíveis no sistema. 
+
+Também conta com uma barra de pesquisa, permitindo que o cliente encontre produtos de forma mais rápida e intuitiva, melhorando a navegação dentro do aplicativo.
+
+![MobileHome](../assets/MobileHome.png)
+
 ---
 
-### Listagem de Produtos
+### Carrinho de Compras
+
+Seção responsável por armazenar todos os produtos que o cliente deseja adquirir. 
+
+O carrinho permite visualizar os itens selecionados de forma organizada, facilitando o controle antes de finalizar o pedido.
+
+![MobileCart](../assets/MobileCart.png)
 
 ---
 
-### Detalhes do Produto
+### Favoritos
+
+Funcionalidade que permite ao usuário salvar produtos de interesse para visualização futura.  
+
+Isso ajuda o cliente a organizar suas preferências e acessar rapidamente os itens desejados.
+
+![MobileFave](../assets/MobileFave.png)
+
+---
+
+### Login / Cadastro
+
+Sistema de autenticação simples, permitindo que o usuário acesse sua conta de forma segura.
+
+O cadastro de novos usuários está temporariamente desativado nesta versão do aplicativo, pois a equipe optou por centralizar o gerenciamento de contas no dashboard, garantindo maior controle e segurança sobre os acessos.
+
+<div style="display: flex; gap: 10px;">
+  <img src="../assets/MobileLogin.png" alt="MobileLogin" width="48%">
+  <img src="../assets/MobileCadastro.png" alt="MobileCadastro" width="48%">
+</div>
 
 ---
 
 ## Observações
 
-Atualmente, a aplicação não está disponível para execução pública, pois ainda se encontra em fase de desenvolvimento e implementação de novas funcionalidades.
+Atualmente, a aplicação mobile ainda está em desenvolvimento e pode passar por mudanças conforme novas funcionalidades forem sendo implementadas.
 
-As imagens acima demonstram o funcionamento atual do sistema.
+As imagens acima representam o estado atual do sistema.
