@@ -161,11 +161,20 @@ Atualmente, a escolha pelo Firestore está alinhada com o estágio do projeto, g
 
 A API oferece diversas funcionalidades essenciais para o funcionamento das aplicações integradas (web, dashboard e mobile):
 
-- CRUD de Produtos
-- CRUD de Usuários
-- Controle de Permissões
-- Upload de Imagens
-- Recuperação de Senha
+- CRUD de Produtos  
+  - Permite criar, visualizar, atualizar e remover produtos do sistema.
+
+- CRUD de Usuários  
+  - Gerenciamento completo de usuários, incluindo cadastro, edição e exclusão.
+
+- Controle de Permissões  
+  - Sistema de alteração de cargos, permitindo elevar usuários comuns para administradores com acesso total ao sistema.
+
+- Upload de Imagens  
+  - Integração com o Cloudinary para envio de imagens, retornando a URL otimizada para armazenamento e uso na aplicação.
+
+- Recuperação de Senha  
+  - Sistema de redefinição de senha via e-mail, garantindo que o usuário possa recuperar o acesso de forma segura.
 
 ---
 
@@ -173,37 +182,48 @@ A API oferece diversas funcionalidades essenciais para o funcionamento das aplic
 
 ### Serviços Externos
 
-- Cloudinary
+- Cloudinary  
 
-  - Serviço responsável pelo armazenamento de imagens enviadas pelo dashboard, retornando a URL para ser utilizada e armazenada no banco de dados.
-  - A integração foi realizada com base na documentação oficial da ferramenta, utilizando testes isolados antes da implementação final em TypeScript no sistema.
+  - Utilizado para armazenamento de imagens enviadas pelo dashboard, retornando a URL para ser armazenada no banco de dados.
+
+  - A integração foi feita com base na documentação oficial, utilizando testes isolados antes da implementação final.  
+
+  - Essa abordagem permitiu validar o funcionamento do upload e garantir maior segurança antes de integrar diretamente ao fluxo principal da aplicação.
 
 ---
 
 ### E-commerce
 
-- Integração focada na visualização de produtos
-- Requisições controladas e seguras
-- Sem acesso a manipulação de dados
+A integração com o e-commerce foi projetada de forma simples, sendo responsável apenas pela visualização dos produtos.  
+
+O backend expõe rotas controladas, permitindo apenas requisições de leitura.  
+Essa decisão reduz a complexidade e aumenta a segurança, evitando que o e-commerce tenha acesso a operações sensíveis.
 
 ---
 
 ### Dashboard
 
-- Integração completa com a API
-- Consumo de rotas administrativas
-- Controle de acesso e autenticação
+A integração com o dashboard é a mais completa, sendo responsável pelo consumo das principais funcionalidades da API. 
+
+O processo envolveu a conexão de múltiplos endpoints, incluindo autenticação, CRUD e controle de permissões.  
+
+Devido à quantidade de funcionalidades, foi necessário um cuidado maior com validações, organização das rotas e segurança da aplicação.  
+
+Essa integração representa o principal ponto de gerenciamento do sistema.
 
 ---
 
 ### Mobile
 
-- Desenvolvido com Expo React Native
-- Estrutura baseada no frontend web
-- Adaptação para ambiente mobile
+A integração com o mobile foi realizada utilizando Expo React Native, aproveitando a similaridade com o ecossistema React. 
+
+O desenvolvimento ocorreu após a consolidação do backend e do dashboard, permitindo reutilizar padrões já definidos.  
+
+Apesar da base semelhante ao frontend web, foram necessárias adaptações específicas para o ambiente mobile. 
+
+Essa abordagem facilitou a implementação e manteve consistência entre as aplicações.
 
 ---
-
 ## Deploy
 
 O deploy do backend encontra-se temporariamente suspenso, pois o sistema ainda está em fase de testes e validações internas.
