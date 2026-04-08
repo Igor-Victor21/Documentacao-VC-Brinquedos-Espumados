@@ -10,9 +10,47 @@ Atualmente, o sistema já cumpre bem sua principal função de manipulação de 
 
 Cada nova funcionalidade implementada terá sua própria documentação, que será atualizada conforme o projeto evolui e ganha escala.
 
-No momento, existe uma API principal em funcionamento, e outra está sendo desenvolvida para disponibilizar os produtos em ambiente de testes, permitindo simular o comportamento do sistema completo com todos os dados em produção.
+No momento, existe uma API principal em funcionamento, e outra API desenvolvida para disponibilizar os produtos em ambiente de testes, permitindo simular o comportamento do sistema completo com todos os dados em produção.
 
 Atualmente, o projeto utiliza plataformas gratuitas para hospedagem, como Render para a API e Vercel para o e-commerce, enquanto o banco de dados já está online e configurado no Firebase.
+
+---
+
+## Arquitetura
+
+O backend do projeto VC Brinquedos Espumados é responsável por centralizar toda a lógica da aplicação, incluindo regras de negócio, segurança, cálculos e integrações com serviços externos.
+
+Toda a comunicação do sistema é feita por meio de uma API REST, que atende as três aplicações principais: e-commerce, dashboard e mobile.
+
+O funcionamento ocorre da seguinte forma:
+
+- O backend recebe requisições das aplicações (frontend, dashboard e mobile)
+- A API valida a origem da requisição (URL/domínio) e verifica se ela está autorizada
+- Em seguida, realiza as validações de segurança, como autenticação e verificação de permissões
+
+Após essas validações, o comportamento varia conforme a aplicação:
+
+- E-commerce:
+
+  - A API permite apenas a visualização dos produtos
+  - Não há acesso a rotas de manipulação de dados
+
+- Dashboard:
+
+  - A API verifica se o usuário está cadastrado
+  - Valida o token JWT para autenticação
+  - Define o nível de acesso:
+
+    - Administradores possuem acesso completo às funcionalidades
+    - Usuários comuns possuem acesso limitado
+
+- Mobile:
+
+  - Segue uma lógica semelhante ao dashboard
+  - Permite autenticação do usuário
+  - Possui acesso a determinadas funcionalidades de manipulação de dados, conforme o nível de permissão
+
+Essa arquitetura permite que o backend tenha controle total sobre o sistema, garantindo segurança, organização e facilitando a escalabilidade das aplicações.
 
 ---
 
@@ -32,40 +70,6 @@ Atualmente, o projeto ainda está em desenvolvimento e continuará recebendo nov
 
 ---
 
-## Arquitetura
-
-O backend do projeto VC Brinquedos Espumados é responsável por centralizar toda a lógica da aplicação, incluindo regras de negócio, segurança, cálculos e integrações com serviços externos.
-
-Toda a comunicação do sistema é feita por meio de uma API REST, que atende as três aplicações principais: e-commerce, dashboard e mobile.
-
-O funcionamento ocorre da seguinte forma:
-
-- O backend recebe requisições das aplicações (frontend, dashboard e mobile)
-- A API valida a origem da requisição (URL/domínio) e verifica se ela está autorizada
-- Em seguida, realiza as validações de segurança, como autenticação e verificação de permissões
-
-Após essas validações, o comportamento varia conforme a aplicação:
-
-- E-commerce:
-  - A API permite apenas a visualização dos produtos
-  - Não há acesso a rotas de manipulação de dados
-
-- Dashboard:
-  - A API verifica se o usuário está cadastrado
-  - Valida o token JWT para autenticação
-  - Define o nível de acesso:
-    - Administradores possuem acesso completo às funcionalidades
-    - Usuários comuns possuem acesso limitado
-
-- Mobile:
-  - Segue uma lógica semelhante ao dashboard
-  - Permite autenticação do usuário
-  - Possui acesso a determinadas funcionalidades de manipulação de dados, conforme o nível de permissão
-
-Essa arquitetura permite que o backend tenha controle total sobre o sistema, garantindo segurança, organização e facilitando a escalabilidade das aplicações.
-
----
-
 ## Estrutura
 
 ### Visão geral da organização do backend:
@@ -76,26 +80,32 @@ A estrutura do backend foi organizada de forma modular, separando responsabilida
 
 O projeto está dividido da seguinte forma:
 
-- config  
+- config
+
   - Responsável pelas configurações de serviços externos, como Cloudinary (imagens) e Firebase (autenticação e banco de dados).
 
-- controllers  
+- controllers
+
   - Contém a lógica principal das funcionalidades da API, como autenticação, gerenciamento de usuários, produtos e área administrativa.
 
-- middlewares  
-  - Responsáveis por interceptar as requisições antes de chegarem aos controllers.  
+- middlewares
+
+  - Responsáveis por interceptar as requisições antes de chegarem aos controllers.
   - Incluem validações como autenticação (JWT), controle de acesso, proteção contra excesso de requisições (rate limit) e gerenciamento de uploads.
 
-- utils  
+- utils
+
   - Funções auxiliares reutilizáveis utilizadas em diferentes partes do sistema.
 
-- Arquivos principais  
-  - app.ts → Configuração principal da aplicação  
-  - index.ts → Ponto de entrada do servidor  
-  - routes.ts → Definição das rotas da API  
-  - mailer.ts → Responsável pelo envio de e-mails  
+- Arquivos principais
 
-- tmp  
+  - app.ts → Configuração principal da aplicação
+  - index.ts → Ponto de entrada do servidor
+  - routes.ts → Definição das rotas da API
+  - mailer.ts → Responsável pelo envio de e-mails
+
+- tmp
+
   - Utilizado para armazenamentos temporários, como arquivos durante processos internos.
 
 Essa organização permite que cada parte do sistema tenha uma responsabilidade bem definida, facilitando o desenvolvimento em equipe e futuras manutenções.
@@ -104,51 +114,117 @@ Por se tratar de uma API privada e de uso interno, alguns detalhes mais específ
 
 ---
 
-## Integração com Serviços Externos
-
-- Cloudinary  
-  - Serviço responsável pelo armazenamento de imagens enviadas pelo dashboard, retornando a URL para ser utilizada e armazenada no banco de dados.  
-  - A integração foi realizada com base na documentação oficial da ferramenta, utilizando testes isolados antes da implementação final em TypeScript no sistema.
-
----
-
 ## Segurança
 
----
+A aplicação conta com diferentes camadas de segurança para garantir a proteção dos dados e o controle de acesso ao sistema:
 
-## Funcionalidades
+- Autenticação com Google
 
----
+  - Permite login seguro utilizando contas Google, reduzindo a necessidade de gerenciamento de senhas e aumentando a confiabilidade da autenticação.
 
-## Rotas da API
+- Token JWT
 
----
+  - Utilizado para autenticação e autorização das requisições.
+  - Garante que apenas usuários autenticados possam acessar rotas protegidas, além de controlar permissões (como acesso administrativo).
 
-## Autenticação e Autorização
+- Rate Limiting
+
+  - Protege a API contra excesso de requisições, evitando ataques como força bruta e sobrecarga no servidor.
+
+- CORS
+
+  - Controla quais origens (domínios) podem acessar a API, impedindo requisições não autorizadas de aplicações externas.
+
+- Cookies
+
+  - Utilizados para armazenamento seguro de informações de sessão, auxiliando na autenticação e na persistência de dados do usuário.
 
 ---
 
 ## Banco de Dados
 
+O banco de dados utilizado no projeto é o Firestore, uma das soluções oferecidas pelo Firebase. A escolha foi feita com base na sua facilidade de uso, rápida configuração e por ser um serviço totalmente gerenciado na nuvem, o que elimina a necessidade de infraestrutura própria.
+
+Além disso, o Firestore já oferece mecanismos de segurança integrados e boa performance para aplicações de pequeno e médio porte, atendendo perfeitamente às necessidades atuais do projeto.
+
+Outro fator relevante na decisão foi a integração com o ecossistema do Firebase, que permite utilizar outras funcionalidades da plataforma de forma simples e eficiente.
+
+No entanto, a equipe está ciente de que, conforme o crescimento do sistema e o aumento no volume de dados e requisições, o Firestore pode apresentar limitações em cenários de alta escala.
+
+Por esse motivo, já existe um planejamento futuro para migração da arquitetura, incluindo a substituição do banco de dados e possíveis ajustes na API, visando maior desempenho, escalabilidade e controle sobre a infraestrutura.
+
+Atualmente, a escolha pelo Firestore está alinhada com o estágio do projeto, garantindo agilidade no desenvolvimento sem comprometer a qualidade e a segurança da aplicação.
+
 ---
 
-## Integração com Frontend
+## Funcionalidades
+
+A API oferece diversas funcionalidades essenciais para o funcionamento das aplicações integradas (web, dashboard e mobile):
+
+- CRUD de Produtos
+- CRUD de Usuários
+- Controle de Permissões
+- Upload de Imagens
+- Recuperação de Senha
 
 ---
 
-## Integração com Mobile
+## Integrações
+
+### Serviços Externos
+
+- Cloudinary
+
+  - Serviço responsável pelo armazenamento de imagens enviadas pelo dashboard, retornando a URL para ser utilizada e armazenada no banco de dados.
+  - A integração foi realizada com base na documentação oficial da ferramenta, utilizando testes isolados antes da implementação final em TypeScript no sistema.
 
 ---
 
-## Integração com Dashboard
+### E-commerce
+
+- Integração focada na visualização de produtos
+- Requisições controladas e seguras
+- Sem acesso a manipulação de dados
+
+---
+
+### Dashboard
+
+- Integração completa com a API
+- Consumo de rotas administrativas
+- Controle de acesso e autenticação
+
+---
+
+### Mobile
+
+- Desenvolvido com Expo React Native
+- Estrutura baseada no frontend web
+- Adaptação para ambiente mobile
 
 ---
 
 ## Deploy
 
+O deploy do backend encontra-se temporariamente suspenso, pois o sistema ainda está em fase de testes e validações internas.
+
+- API separada para testes
+- Planejamento de deploy em VPS
+- Foco em performance e estabilidade
+
 ---
 
 ## Melhorias Futuras
+
+- Agentes de IA
+- Analytics de Produtos
+- Funil de Vendas
+
+### Infraestrutura
+
+- Migração para Spring Boot
+- Migração para MongoDB
+- Reforço de segurança
 
 ---
 
