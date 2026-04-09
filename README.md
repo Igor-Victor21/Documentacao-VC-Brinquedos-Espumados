@@ -216,7 +216,7 @@ Desenvolvido por:
 
 ---
 
-## 🔒 Status do Projeto
+## Status do Projeto
 
 Atualmente este projeto encontra-se em ambiente privado para fins de desenvolvimento e validação.
 
